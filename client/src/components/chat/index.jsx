@@ -8,9 +8,9 @@ import StandardMessageForm from "@/components/customMessageForms/StandardMessage
 const Chat = () => {
     const chatProps = useMultiChatLogic(
         import.meta.env.VITE_PROJECT_ID,
-        "testuser",
+        "test",
         "1234"
-    )
+    );
   return (
     <div style={{flexBasis: "100%"}}>
      <MultiChatSocket {...chatProps} />
@@ -22,7 +22,7 @@ const Chat = () => {
     }
     renderMessageForm = {(props) => {
         return (
-            <StandardMessageForm props={props} activeChat={chatProps.chat}/>
+            <StandardMessageForm props={props} activeChat={chatProps.chat} />
         )
       }}
      />
